@@ -498,7 +498,7 @@ body {
 
 .main {
   max-width: 100%;
-  margin: 0 17vh;
+  margin: 0 auto;
   padding: 1rem;
 }
 
@@ -517,18 +517,18 @@ body {
   flex-direction: column;
   padding: 1rem;
   width: 100%; /* Full width by default */
-  height: auto; /* Adjust height to content */
+  height: auto;
 }
 
 .card_image {
   position: relative;
   width: 100%; /* Ensure it scales with the card */
-  max-height: 41vh;
+  height: auto; /* Let the image height adjust based on the content */
 }
 
 .card_image img {
   width: 100%; /* Keep the width responsive */
-  height: 37vh;
+  height: auto; /* Maintain aspect ratio */
   object-fit: cover;
 }
 
@@ -610,7 +610,7 @@ hr {
 
 @media (min-width: 40rem) {
   .main {
-    margin: 0 10vh; /* Adjust margin for medium screens */
+    margin: 0 10vh;
   }
 
   .cards_item {
@@ -624,7 +624,7 @@ hr {
 
 @media (min-width: 56rem) {
   .main {
-    margin: 0 8vh; /* Further adjust margin for large screens */
+    margin: 0 8vh;
   }
 
   .cards_item {
@@ -636,7 +636,7 @@ hr {
   }
 
   .card_content {
-    max-height: 320px; /* Adjust content height */
+    max-height: 320px;
   }
 }
 
@@ -644,6 +644,11 @@ hr {
 @media (max-width: 40rem) {
   .cards_item {
     padding: 0.5rem;
+    width: 100%; /* Full width on small screens */
+  }
+
+  .card_image {
+    height: auto; /* Adjust height automatically */
   }
 
   .card_image img {
